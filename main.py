@@ -14,3 +14,10 @@ with open(output_file_name, 'w', encoding='utf-8') as output_file:
 
         output_file.write(f'{file_name}\n{line_count}\n')
 
+        with open(file_name, 'r', encoding='utf-8') as input_file:
+            for line in input_file:
+                output_file.write(line)
+            output_file.write('\n')
+
+
+
